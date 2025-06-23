@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kalender Bulanan dengan Hijri & Weton</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"  rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"  rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5">
+
+  <!-- Datepicker dengan navigasi -->
+  <div class="d-flex justify-content-center mb-4">
+    <div class="datepicker-wrapper">
+      <span id="prevMonth" class="nav-btn btn btn-outline-secondary"><</span>
+      <input type="text" id="datepicker" class="form-control text-center" placeholder="Pilih Tanggal">
+      <span id="nextMonth" class="nav-btn btn btn-outline-secondary">></span>
+    </div>
+  </div>
+
+  <!-- Tabel kalender -->
+  <div class="table-responsive">
+    <table class="table calendar-table table-bordered align-middle">
+      <thead>
+        <tr class="date-row">
+          <td></td>
+          <td colspan="5"></td>
+          <td></td>
+        </tr>
+        <tr class="date-row">
+          <td></td>
+          <td colspan="5"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="day-name minggu">Minggu</th>
+          <th class="day-name">Senin</th>
+          <th class="day-name">Selasa</th>
+          <th class="day-name">Rabu</th>
+          <th class="day-name">Kamis</th>
+          <th class="day-name jumat">Jumat</th>
+          <th class="day-name">Sabtu</th>
+        </tr>
+      </thead>
+      <tbody id="calendarBody">
+        <!-- Isi tabel akan diisi oleh JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Tabel Daftar Libur -->
+  <div class="mt-4">
+    <h5>Daftar Hari Libur Nasional</h5>
+    <div class="table-responsive">
+      <table class="table table-sm table-striped table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Tanggal</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody id="holidayTable">
+          <tr><td colspan="2" class="text-center">Memuat data...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- Flatpickr -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> 
+
+<!-- Script Utama -->
+<script src="script.js"></script>
+
+</body>
+</html>
